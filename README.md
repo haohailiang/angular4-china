@@ -1,28 +1,46 @@
-# Angular4China
+# 创建项目用到的命令
+## 卸载@angular/cli包
+```
+sudo npm uninstall -g @angular/cli
+```
+## 清理npm包的缓存
+```
+npm cache clean
+```
+## 安装@angular/cli最新包
+```
+sudo cnpm i -g @angular/cli@latest
+```
+## 查看安装的版本号
+```
+ng version
+```
+## 新建项目
+```
+sudo ng new angular4-china --skip-install
+sudo ng new angular4-china -si --style=scss
+```
+## 进入文件夹安装[一定要用sudo,不然有些包安装不上, 在控制台上安装会比在IDE中安装成功率高]
+```
+sudo cnpm i
+cnpm install
+```
+## 修改文件夹权限
+```
+sudo chown -R haohailiang ./../angular4-china/
+```
+## 启动项目
+```
+sudo ng serve --open
+ng serve -o
+```
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.1.0.
+## 创建heros组件
+```
+ng generate component heroes
+ng g c hero-detail --spec=false
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|module`.
-
-## Build
-
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `-prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-Before running the tests make sure you are serving the app via `ng serve`.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+ng generate service hero
+ng g s heroes/hero --spec=false
+# 碰见异常删除node_modules重新安装
+```
