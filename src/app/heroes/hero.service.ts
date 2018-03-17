@@ -15,4 +15,9 @@ export class HeroService {
     this.messageService.add('从服务器获取服务');
     return of(HEROES);
   }
+
+  getHero(id: number): Observable<Hero> {
+    this.messageService.add(`获取ID号为${id}的英雄数据`);
+    return of(HEROES.find(hero => hero.id === id));
+  }
 }
