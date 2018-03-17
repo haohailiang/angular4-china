@@ -39,6 +39,8 @@ ng serve -o
 ```
 ng generate component heroes
 ng g c hero-detail --spec=false
+ng generate component messages
+ng g c messages --spec=false
 # 碰见异常删除node_modules重新安装
 ```
 ## 提供service给指定的module
@@ -46,4 +48,6 @@ ng g c hero-detail --spec=false
 ng generate service hero
 ng g s heroes/hero --spec=false --module=app
 ng generate service heroes/hero --module=app
+ng g s messages/message --spec=false --module=app
+ng generate service messages/message --module=app
 ```
