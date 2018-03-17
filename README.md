@@ -51,3 +51,10 @@ ng generate service heroes/hero --module=app
 ng g s messages/message --spec=false --module=app
 ng generate service messages/message --module=app
 ```
+## 创建路由
+--flat 把这个文件放进了 src/app 中，而不是单独的目录中。  
+--module=app 告诉 CLI 把它注册到 AppModule 的 imports 数组中。
+```
+ng generate module app-routing --flat --module=app
+ng g m app-routing --flat --module=app
+```
