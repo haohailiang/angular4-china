@@ -41,6 +41,7 @@ ng generate component heroes
 ng g c hero-detail --spec=false
 ng generate component messages
 ng g c messages --spec=false
+ng g c dashboard --spec=false
 # 碰见异常删除node_modules重新安装
 ```
 ## 提供service给指定的module
