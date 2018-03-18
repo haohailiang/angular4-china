@@ -18,12 +18,20 @@ export class HeroService {
 
   getHeroes(): Observable<Hero[]> {
     this.log('从内存服务器中获取服务');
-    return this.http.get<Hero[]>(this.heroesUrl);
+    return this.http.get<Hero[]>(this.heroesUrl).pipe(
+      tap(heroes => this.log(`相当于do可以查看内部的数据流${JSON.stringify(heroes)}`)),
+      // catchError(this.handleError('getHeroes', []))
+    );
   }
 
   getHero(id: number): Observable<Hero> {
-    this.log(`获取ID号为${id}的英雄数据`);
-    return of(HEROES.find(hero => hero.id === id));
+    // this.log(`获取ID号为${id}的英雄数据`);
+    // return of(HEROES.find(hero => hero.id === id));
+    const url = `${this.heroesUrl}/${id}`;
+    return this.http.get<Hero>(url).pipe(
+      tap(_ => this.log(`fetched hero id=${id}`)),
+      // catchError(this.handleError<Hero>(`getHero id=${id}`))
+    );
   }
 
   private log(message: string) {
