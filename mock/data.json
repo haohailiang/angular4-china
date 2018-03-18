@@ -1,14 +1,6 @@
 {
   "heroes": [
     {
-      "id": 11,
-      "name": "zzzzzz"
-    },
-    {
-      "id": 12,
-      "name": "Narco"
-    },
-    {
       "id": 13,
       "name": "Bombasto"
     },

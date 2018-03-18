@@ -42,6 +42,7 @@ ng g c hero-detail --spec=false
 ng generate component messages
 ng g c messages --spec=false
 ng g c dashboard --spec=false
+ng g c hero-search --spec=false
 # 碰见异常删除node_modules重新安装
 ```
 ## 提供service给指定的module
@@ -66,4 +67,5 @@ sudo cnpm install angular-in-memory-web-api --save
 ## 虚拟服务器切换成json-server服务器
 ```
 json-server ./mock/data.json -w
+http://localhost:3000/heroes?name_like=d
 ```
