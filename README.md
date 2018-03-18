@@ -59,3 +59,7 @@ ng generate service messages/message --module=app
 ng generate module app-routing --flat --module=app
 ng g m app-routing --flat --module=app
 ```
+## 虚拟服务器
+```
+sudo cnpm install angular-in-memory-web-api --save
+```
