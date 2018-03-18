@@ -63,3 +63,7 @@ ng g m app-routing --flat --module=app
 ```
 sudo cnpm install angular-in-memory-web-api --save
 ```
+## 虚拟服务器切换成json-server服务器
+```
+json-server ./mock/data.json -w
+```

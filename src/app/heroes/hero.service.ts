@@ -5,12 +5,11 @@ import { of } from 'rxjs/observable/of';
 import { catchError, map, tap } from 'rxjs/operators';
 
 import { Hero } from './hero.model';
-import { HEROES } from '../mock/mock-heroes';
 import { MessageService } from '../messages/message.service';
 
 @Injectable()
 export class HeroService {
-  private heroesUrl = 'api/heroes';  // URL to web api
+  private heroesUrl = 'http://localhost:3000/heroes';  // URL to web api
 
   constructor(
     private http: HttpClient,
